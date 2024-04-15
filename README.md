@@ -33,6 +33,6 @@ If you pass only a message, it will not save.
     Logger mongoLogger = (Logger) LoggerFactory.getLogger("mongoLogger")
     Document info = new Document().append("Hello", "logger");
     
-    log.info("Hello, World!", info);
+    mongoLogger.info("Hello, World!", info);
 
 In this case I'm using the bson document.
