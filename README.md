@@ -29,3 +29,10 @@ Because it uses ".insertMany()" to save in the database if one fails it'll save
 everything as a String, so I recommend passing only Hash tables to it.
 
 If you pass only a message, it will not save.
+
+    Logger mongoLogger = (Logger) LoggerFactory.getLogger("mongoLogger")
+    Document info = new Document().append("Hello", "logger");
+    
+    log.info("Hello, World!", info);
+
+In this case I'm using the bson document.
